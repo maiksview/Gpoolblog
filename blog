@@ -1,0 +1,418 @@
+<html class="focus-outline-visible" lang="es"><body><header style="
+    header {
+  position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #212c69, #0f163a);
+    padding: 12px 40px;
+    color: white;
+    z-index: 10;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: var(--main-blue);
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.logo:
+    hover {
+  transform: scale(1.1);
+}
+    nav ul {
+  list-style: none;
+    display: flex;
+    gap: 24px;
+}
+    nav ul li {
+  cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+}
+    nav ul li:hover {
+  color: #a2b1ff;
+    transform: translateY(-2px);
+};
+">
+  <div style="display: flex; align-items: center; gap: 30px;">
+    <div class="logo">GP</div>
+    <nav>
+      <ul>
+        <li>Inicio</li>
+        <li>Piscinas</li>
+        <li>Contacto</li>
+      </ul>
+    </nav>
+  </div>
+  <div style="display: flex; align-items: center; gap: 20px;">
+    <div class="search">
+      
+      <input type="text" placeholder="Buscar...">
+    </div>
+    <div class="social-icons">
+      <div>I</div>
+      <div>F</div>
+      <div>Y</div>
+    </div>
+  </div>
+</header>
+</body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog oficial de Gre Pool: ideas, consejos y novedades sobre piscinas y su mantenimiento.">
+  <meta name="author" content="Gre Pool">
+  
+  <title>Blog Gre Pool</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-blue: #212c69;
+      --light-blue: #f0f4ff;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--light-blue);
+      color: var(--main-blue);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--main-blue);
+      padding: 10px 20px;
+      color: white;
+      z-index: 10;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      background: white;
+      color: var(--main-blue);
+      font-weight: bold;
+      font-size: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    nav ul li:hover {
+      color: var(--light-blue);
+    }
+
+    .search {
+      flex: 1;
+      margin: 0 20px;
+    }
+
+    .search input {
+      width: 100%;
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icons div {
+      width: 30px;
+      height: 30px;
+      background: white;
+      color: var(--main-blue);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      transition: transform 0.3s;
+    }
+
+    .social-icons div:hover {
+      transform: scale(1.1);
+    }
+
+    .dropdown-menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      background: white;
+      padding: 20px;
+    }
+
+    .dropdown-menu div {
+      background: var(--main-blue);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .dropdown-menu div:hover {
+      background: #3141a0;
+    }
+
+    .slide-section {
+      position: relative;
+      width: 100%;
+      height: 33vh;
+      overflow: hidden;
+    }
+
+    .slide-track {
+      display: flex;
+      width: 300%;
+      animation: slideAnim 12s infinite;
+    }
+
+    .slide-box {
+      flex: 0 0 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+      color: white;
+      background: rgba(33, 44, 105, 0.7);
+    }
+
+    .slide-box h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .slide-box p {
+      font-size: 16px;
+      max-width: 400px;
+    }
+
+    .slide-box:nth-child(1) { background-color: #006d77; }
+    .slide-box:nth-child(2) { background-color: #00b4d8; }
+    .slide-box:nth-child(3) { background-color: #0077b6; }
+
+    @keyframes slideAnim {
+      0%, 10% { transform: translateX(0); }
+      33%, 43% { transform: translateX(-100%); }
+      66%, 76% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+
+    .circle-effects {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .circle {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(33, 44, 105, 0.2);
+      animation: pulse 5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.5); opacity: 0.6; }
+      50% { transform: scale(1.2); opacity: 0.2; }
+      100% { transform: scale(0.5); opacity: 0; }
+    }
+
+    .youtube-section, .articles-section, .contact-section {
+      padding: 40px 20px;
+      background: white;
+      position: relative;
+      z-index: 1;
+    }
+
+    .youtube-section a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--main-blue);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .youtube-section a:hover {
+      background: #3141a0;
+    }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .article {
+      background: var(--light-blue);
+      padding: 20px;
+      border-radius: 6px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .article:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .article h3 {
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+      margin-top: 20px;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background: var(--main-blue);
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #3141a0;
+    }
+  </style>
+</head><body>
+  
+
+  <section class="dropdown-menu">
+    <div>Tipos de piscinas</div>
+    <div>Mantenimiento</div>
+    <div>Accesorios</div>
+    <div>Recomendaciones</div>
+    <div>Decoración</div>
+    <div>Presupuestos</div>
+  </section>
+
+  <section class="slide-section">
+    <div class="slide-track">
+      <div class="slide-box">
+        <h3>Piscina Moderna</h3>
+        <p>Diseños actuales para espacios elegantes y funcionales.</p>
+      </div>
+      <div class="slide-box">
+        <h3>Estilo Natural</h3>
+        <p>Integración con la naturaleza para una experiencia relajante.</p>
+      </div>
+      <div class="slide-box">
+        <h3>Para Niños</h3>
+        <p>Seguras, divertidas y llenas de color para los más pequeños.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="circle-effects">
+    <div class="circle" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+    <div class="circle" style="top: 40%; left: 70%; animation-delay: 2s;"></div>
+    <div class="circle" style="top: 80%; left: 30%; animation-delay: 4s;"></div>
+  </div>
+
+  <section class="youtube-section">
+    <h2>Canal de YouTube de Gre Pool</h2>
+    <p>Explora nuestros videos y tutoriales en el canal oficial.</p>
+    <a href="#" target="_blank">Visitar canal</a>
+  </section>
+
+  <section class="articles-section">
+    <h2>Artículos por Gre</h2>
+    <div class="articles">
+      <div class="article">
+        <h3>Ideas para decorar tu piscina</h3>
+        <p>Descubre las mejores formas de hacer tu piscina el centro de atención de tu jardín.</p>
+      </div>
+      <div class="article">
+        <h3>Errores comunes en el mantenimiento</h3>
+        <p>Evita daños y cuida la salud del agua con estos consejos prácticos.</p>
+      </div>
+      <div class="article">
+        <h3>Errores comunes en el mantenimiento</h3>
+        <p>Evita daños y cuida la salud del agua con estos consejos prácticos.</p>
+      </div><div class="article">
+        <h3>Errores comunes en el mantenimiento</h3>
+        <p>Evita daños y cuida la salud del agua con estos consejos prácticos.</p>
+      </div><div class="article">
+        <h3>Ventajas de piscinas desmontables</h3>
+        <p>Conoce por qué cada vez más personas apuestan por esta opción.</p>
+      </div>
+    <div class="article">
+        <h3>Ventajas de piscinas desmontables</h3>
+        <p>Conoce por qué cada vez más personas apuestan por esta opción.</p>
+      </div></div>
+  </section>
+
+  <section class="contact-section">
+    <h2>Contacto</h2>
+    <p>Envíanos tus dudas, sugerencias o pedidos:</p>
+    <form>
+      <input type="text" placeholder="Nombre" required="">
+      <input type="email" placeholder="Correo electrónico" required="">
+      <textarea rows="4" placeholder="Mensaje"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+</body></html>
